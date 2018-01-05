@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather Forecast</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+
+</head>
+<body>
+<h1 id="project-title">Weather Forecast</h1>
+<h3 id="sub-title">-Get prepared for weather change</h3>
+<div class="container weather-box">
+	
+	<div class="row">
+		<div class="col-md-12 col-xs-12 weather-info">
+			<div class="col-md-4 col-xs-6 weather">
+					<!-- <p><span id="weather-city"></span><span id="weather-country"></span></p> -->
+					<div class= "push-toggle pull-right">
+				      <input id="conversion" type="checkbox">
+				      <label for="conversion"></label>
+				    </div>
+					<p><span id="weather-icon"></span></p>
+
+					<p>Temp:- <span id="weather-temp" ></span>&degC</p>
+			</div>
+			<div class="col-md-4 col-xs-6 info">
+					<p><span id="weather-city"></span><span id="weather-country"></span></p>
+					<p>Wind:- <span  id="wind-info"></span>mph</p>
+					<p>Degree:- <span  id="wind-degree"></span>&degC</p>
+					<p>Humidity:- <span id="humidity-info"></span>%</p>
+					<p>Pressure:- <span  id="pressure"></span></p>
+					<!-- <p>Visibility:- <span id="visibility-info"></span></p> -->
+					<!-- <p>Next-hour:- <span id="nextHour-info"></span></p> -->
+			</div>
+			<div class="col-md-4 col-xs-12 location">
+					<!-- <p>Banglore,India</p>
+					<p>Wind:- 5m/h</p>
+					<p>Humidity:- 16%</p>
+					<p>Visibility:- 10km</p>
+					<p>Next-hour:- Cloudy</p> -->
+					<p>Longitude:- <span id="coords-long"></span>&deg</p>
+					<p>Latitude:- <span id="coords-lat"></span>&deg</p>	
+					<form>
+					<button class="custom-btn btn-blue" type="button" id="local-weather">Weather by my location</button><br><br>
+					<button class="custom-btn btn-blue" type="button" id="weatherByCity">Find by</button><input type="text" placeholder="{City/State},{Country-code}" id="city-txt"><br><br>
+					<button class="custom-btn btn-blue" type="button" id="weatherByZip">Find by</button><input type="text" placeholder="{Zip-code},{Country-code}" id="zip-txt"><br><br>
+					</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12 col-xs-12 next-days">
+			<div class="col-md-3 col-xs-3">
+			<p id="day1">Day1</p>
+			<p id="day1-icon"></p>
+			<p><span id="day1-temp"></span>&degC</p>
+			</div>
+			
+			<div class="col-md-3 col-xs-3">
+			<p id="day2">Day2</p>
+			<p id="day2-icon"></p>
+			<p><span id="day2-temp"></span>&degC</p>
+			</div>
+			
+			<div class="col-md-3 col-xs-3">
+			<p id="day3">Day3</p>
+			<p id="day3-icon"></p>
+			<p><span id="day3-temp"></span>&degC</p>
+			</div>
+			
+			<div class="col-md-3 col-xs-3">
+			<p id="day4">Day4</p>
+			<p id="day4-icon"></p>
+			<p><span id="day4-temp"></span>&degC</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--  <button type="button" id="local-temp">LocalTemp</button><br><br> -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
+
+
+<!-- It's a freecodecamp front-end development project in which a Local Weather app is to be built . On loading, the geolocation is shown and accordingly, the  API is called with the geographical coordinates as the parameters. As a result, local weather is shown. In addition, two more buttons are added to find weather by City Id and Zip Id. -->
